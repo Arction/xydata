@@ -22,7 +22,8 @@
     "dist/**/*",
     "LICENSE",
     "package.json",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "main": "dist/xydata.js",
   "module": "dist/xydata.es.js",
