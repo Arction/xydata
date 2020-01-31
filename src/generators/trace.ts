@@ -24,6 +24,8 @@ export function createTraceGenerator() {
 /**
  * A trace data generator.
  * Generates random points that can go to any direction from the previous point.
+ *
+ * To create a new instance of trace data generator use [[createTraceGenerator]] factory.
  */
 class TraceGenerator extends DataGenerator<Point, TraceGeneratorOptions> {
     constructor( args: TraceGeneratorOptions ) {

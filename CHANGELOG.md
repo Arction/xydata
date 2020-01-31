@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased] - yyyy-mm-dd
 ### Added
 
+- Parametric Function Generator
+
 ### Changed
+
+- Upgraded dependencies to latest released versions
+- Migrated from rollup-plugin-typescript2 to @wessberg/rollup-plugin-ts
+- Updated documentation using latest TypeDoc generator
 
 ### Deprecated
 

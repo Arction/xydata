@@ -3,7 +3,7 @@ const { series, parallel, src, dest, watch } = require('gulp')
 const mocha = require('gulp-mocha')
 const tslint = require('gulp-tslint')
 const rollup = require('rollup')
-const rollupTypescript = require('rollup-plugin-typescript2')
+const rollupTypescript = require('@wessberg/rollup-plugin-ts')
 const rollupNodeResolve = require('rollup-plugin-node-resolve')
 const rollupCommonjs = require('rollup-plugin-commonjs')
 const rollupSourceMaps = require('rollup-plugin-sourcemaps')
@@ -88,7 +88,8 @@ function docs() {
             mode: 'file',
             tsConfig: 'tsconfig.json',
             name: 'XYData Generator API Documentation',
-            hideGenerator: true
+            hideGenerator: true,
+            exclude: '**/node_modules/**'
         }))
 }
 /**

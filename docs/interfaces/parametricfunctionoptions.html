@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Point | XYData Generator API Documentation</title>
+	<title>ParametricFunctionOptions | XYData Generator API Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="point.html">Point</a>
+					<a href="parametricfunctionoptions.html">ParametricFunctionOptions</a>
 				</li>
 			</ul>
-			<h1>Interface Point</h1>
+			<h1>Interface ParametricFunctionOptions</h1>
 		</div>
 	</div>
 </header>
@@ -67,7 +67,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Represents a xy point</p>
+						<p>Options for Parametric Function generator.</p>
 					</div>
 				</div>
 			</section>
@@ -75,7 +75,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Point</span>
+						<span class="target">ParametricFunctionOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -86,8 +86,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="point.html#x" class="tsd-kind-icon">x</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="point.html#y" class="tsd-kind-icon">y</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#end" class="tsd-kind-icon">end</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#step" class="tsd-kind-icon">step</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#xfunction" class="tsd-kind-icon">x<wbr>Function</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#yfunction" class="tsd-kind-icon">y<wbr>Function</a></li>
 							</ul>
 						</section>
 					</div>
@@ -96,32 +99,77 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="x" class="tsd-anchor"></a>
-					<h3>x</h3>
-					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="end" class="tsd-anchor"></a>
+					<h3>end</h3>
+					<div class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dataHost.ts:10</li>
+							<li>Defined in generators/parametricFunction.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>X Coordinate</p>
+							<p>End t-value.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="y" class="tsd-anchor"></a>
-					<h3>y</h3>
-					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="start" class="tsd-anchor"></a>
+					<h3>start</h3>
+					<div class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dataHost.ts:14</li>
+							<li>Defined in generators/parametricFunction.ts:21</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Y Coordinate</p>
+							<p>Start t-value.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="step" class="tsd-anchor"></a>
+					<h3>step</h3>
+					<div class="tsd-signature tsd-kind-icon">step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/parametricFunction.ts:29</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Step of <code>t</code> between each sample</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="xfunction" class="tsd-anchor"></a>
+					<h3>x<wbr>Function</h3>
+					<div class="tsd-signature tsd-kind-icon">x<wbr>Function<span class="tsd-signature-symbol">:</span> <a href="../globals.html#parametricfunction" class="tsd-signature-type">ParametricFunction</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/parametricFunction.ts:13</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Function for X-value</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="yfunction" class="tsd-anchor"></a>
+					<h3>y<wbr>Function</h3>
+					<div class="tsd-signature tsd-kind-icon">y<wbr>Function<span class="tsd-signature-symbol">:</span> <a href="../globals.html#parametricfunction" class="tsd-signature-type">ParametricFunction</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/parametricFunction.ts:17</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Function for Y-value</p>
 						</div>
 					</div>
 				</section>
@@ -179,24 +227,33 @@
 					<li class=" tsd-kind-interface">
 						<a href="ohlcgeneratoroptions.html" class="tsd-kind-icon">OHLCGenerator<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="parametricfunctionoptions.html" class="tsd-kind-icon">Parametric<wbr>Function<wbr>Options</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="point.html" class="tsd-kind-icon">Point</a>
+						<a href="parametricfunctionoptions.html" class="tsd-kind-icon">Parametric<wbr>Function<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="point.html#x" class="tsd-kind-icon">x</a>
+								<a href="parametricfunctionoptions.html#end" class="tsd-kind-icon">end</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="point.html#y" class="tsd-kind-icon">y</a>
+								<a href="parametricfunctionoptions.html#start" class="tsd-kind-icon">start</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="parametricfunctionoptions.html#step" class="tsd-kind-icon">step</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="parametricfunctionoptions.html#xfunction" class="tsd-kind-icon">x<wbr>Function</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="parametricfunctionoptions.html#yfunction" class="tsd-kind-icon">y<wbr>Function</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="point.html" class="tsd-kind-icon">Point</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="progressivefunctionoptions.html" class="tsd-kind-icon">Progressive<wbr>Function<wbr>Options</a>
 					</li>

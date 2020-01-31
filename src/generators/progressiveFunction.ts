@@ -37,6 +37,8 @@ export function createProgressiveFunctionGenerator() {
 /**
  * A progressive function data generator.
  * Generates point data that has progressive X axis and the value for Y axis is created from the user given function.
+ *
+ * To create a new instance of progressive function data generator use [[createProgressiveFunctionGenerator]] factory.
  */
 class ProgressiveFunctionGenerator extends DataGenerator<Point, ProgressiveFunctionOptions> {
     private x = this.options.start

@@ -44,6 +44,8 @@ export function createOHLCGenerator() {
 /**
  * OHLC data generator.
  * Generates random OHLC data. The open value is derived from the previous close.
+ *
+ * To create a new instance of OHLC data generator use [[createOHLCGenerator]] factory.
  */
 class OHLCGenerator extends DataGenerator<OHLCData, OHLCGeneratorOptions> {
     constructor( args: OHLCGeneratorOptions ) {

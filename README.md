@@ -105,6 +105,7 @@ after the stream has been generated.
 |-----------|-------------|
 | Delta Function | Generate mostly flat data with random spikes. |
 | OHLC | Generate Open, High, Low, Close data. |
+| Parametric Function | Sample user defined X and Y functions for each t step. |
 | Progressive Function | Sample a user defined function with given X step. |
 | Progressive Random | Generate random progressive data that has progessive X step. |
 | Progressive Trace | Generate random trace data from previous point that has progressive X step. |
