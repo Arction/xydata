@@ -88,7 +88,8 @@ function docs() {
             mode: 'file',
             tsConfig: 'tsconfig.json',
             name: 'XYData Generator API Documentation',
-            hideGenerator: true
+            hideGenerator: true,
+            exclude: '**/node_modules/**'
         }))
 }
 /**
