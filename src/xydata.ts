@@ -11,6 +11,7 @@ export { createOHLCGenerator } from './generators/OHLC'
 export { createDeltaFunctionGenerator } from './generators/deltaFunction'
 export { createWhiteNoiseGenerator } from './generators/whiteNoise'
 export { createSampledDataGenerator } from './generators/sampledData'
+export { createParametricFunctionGenerator } from './generators/parametricFunction'
 
 // Base classes
 export { Stream } from './stream'
