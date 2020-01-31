@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Stream | XYData Generator API Documentation</title>
+	<title>ParametricFunctionGenerator | XYData Generator API Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="stream.html">Stream</a>
+					<a href="parametricfunctiongenerator.html">ParametricFunctionGenerator</a>
 				</li>
 			</ul>
-			<h1>Class Stream&lt;T&gt;</h1>
+			<h1>Class ParametricFunctionGenerator</h1>
 		</div>
 	</div>
 </header>
@@ -67,28 +67,22 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Data stream.</p>
+						<p>A Parametric function data generator.
+						Generates point data by sampling X and Y functions with for each step <code>t</code>.</p>
 					</div>
+					<p>To create a new instance of Parametric function data generator use <a href="../globals.html#createparametricfunctiongenerator">createParametricFunctionGenerator</a> factory.</p>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>The type of the streamed data.</p>
-							</div>
-						</div>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Stream</span>
+						<a href="datagenerator.html" class="tsd-signature-type">DataGenerator</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/parametricfunctionoptions.html" class="tsd-signature-type">ParametricFunctionOptions</a><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ParametricFunctionGenerator</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -99,15 +93,18 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="stream.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="parametricfunctiongenerator.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stream.html#foreach" class="tsd-kind-icon">for<wbr>Each</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stream.html#map" class="tsd-kind-icon">map</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stream.html#push" class="tsd-kind-icon">push</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="parametricfunctiongenerator.html#generate" class="tsd-kind-icon">generate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="parametricfunctiongenerator.html#setend" class="tsd-kind-icon">set<wbr>End</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="parametricfunctiongenerator.html#setstart" class="tsd-kind-icon">set<wbr>Start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="parametricfunctiongenerator.html#setstep" class="tsd-kind-icon">set<wbr>Step</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="parametricfunctiongenerator.html#setxfunction" class="tsd-kind-icon">setXFunction</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="parametricfunctiongenerator.html#setyfunction" class="tsd-kind-icon">setYFunction</a></li>
 							</ul>
 						</section>
 					</div>
@@ -115,207 +112,210 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Stream<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/streamoptions.html" class="tsd-signature-type">StreamOptions</a>, infiniteReset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="stream.html" class="tsd-signature-type">Stream</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Parametric<wbr>Function<wbr>Generator<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><a href="../interfaces/parametricfunctionoptions.html" class="tsd-signature-type">ParametricFunctionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="datagenerator.html">DataGenerator</a>.<a href="datagenerator.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in stream.ts:77</li>
+									<li>Defined in generators/parametricFunction.ts:56</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Create a new instance of a stream.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <a href="../interfaces/streamoptions.html" class="tsd-signature-type">StreamOptions</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>The options to use to construct this stream.</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<h5>infiniteReset: <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>A function to use when offsetting the data during moving it to back of the data stream</p>
-										</div>
-									</div>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>value: <span class="tsd-signature-type">T</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
+									<h5>args: <a href="../interfaces/parametricfunctionoptions.html" class="tsd-signature-type">ParametricFunctionOptions</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="stream.html" class="tsd-signature-type">Stream</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="foreach" class="tsd-anchor"></a>
-					<h3>for<wbr>Each</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">for<wbr>Each<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="generate" class="tsd-anchor"></a>
+					<h3>generate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">generate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="datahost.html" class="tsd-signature-type">DataHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="datagenerator.html">DataGenerator</a>.<a href="datagenerator.html#generate">generate</a></p>
 								<ul>
-									<li>Defined in stream.ts:209</li>
+									<li>Defined in dataGenerator.ts:24</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Calls the handler for each element of the stream.</p>
+									<p>Generate new instance of DataHost with unique data.
+									Data is added to the DataHost asynchronously.</p>
 								</div>
 							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>handler: <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>A function that works just like a normal JavaScript Array.prototype.forEach handler.</p>
-									</div>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>value: <span class="tsd-signature-type">T</span></h5>
-														</li>
-														<li>
-															<h5>index: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="datahost.html" class="tsd-signature-type">DataHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A new DataHost.</p>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="map" class="tsd-anchor"></a>
-					<h3>map</h3>
+					<a name="setend" class="tsd-anchor"></a>
+					<h3>set<wbr>End</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="stream.html" class="tsd-signature-type">Stream</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>End<span class="tsd-signature-symbol">(</span>end<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in stream.ts:184</li>
+									<li>Defined in generators/parametricFunction.ts:96</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Maps the stream of data.</p>
+									<p>Returns a new Parametric function generator with the new end t-value.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>handler: <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span></h5>
+									<h5>end: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A function that works just like a normal JavaScript Array.prototype.map handler.</p>
+										<p>End t-value</p>
 									</div>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>value: <span class="tsd-signature-type">T</span></h5>
-														</li>
-														<li>
-															<h5>index: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="stream.html" class="tsd-signature-type">Stream</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A new stream with the data mapped by the handler.</p>
+							<h4 class="tsd-returns-title">Returns <a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="push" class="tsd-anchor"></a>
-					<h3>push</h3>
+					<a name="setstart" class="tsd-anchor"></a>
+					<h3>set<wbr>Start</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">push<span class="tsd-signature-symbol">(</span>newData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Start<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in stream.ts:170</li>
+									<li>Defined in generators/parametricFunction.ts:89</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Push new data to the end of stream.</p>
+									<p>Returns a new Parametric function generator with the new start t-value.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>newData: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>New data point</p>
+										<p>Start t-value</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setstep" class="tsd-anchor"></a>
+					<h3>set<wbr>Step</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Step<span class="tsd-signature-symbol">(</span>step<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in generators/parametricFunction.ts:103</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new Parametric function generator with the new t-step.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>step: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>t-step between each sample.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setxfunction" class="tsd-anchor"></a>
+					<h3>setXFunction</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">setXFunction<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><a href="../globals.html#parametricfunction" class="tsd-signature-type">ParametricFunction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in generators/parametricFunction.ts:75</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new Parametric function generator with the new X-value sampling function.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>handler: <a href="../globals.html#parametricfunction" class="tsd-signature-type">ParametricFunction</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A function that is sampled to generate the data.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setyfunction" class="tsd-anchor"></a>
+					<h3>setYFunction</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">setYFunction<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><a href="../globals.html#parametricfunction" class="tsd-signature-type">ParametricFunction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in generators/parametricFunction.ts:82</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new Parametric function generator with the new Y-value sampling function.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>handler: <a href="../globals.html#parametricfunction" class="tsd-signature-type">ParametricFunction</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A function that is sampled to generate the data.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="parametricfunctiongenerator.html" class="tsd-signature-type">ParametricFunctionGenerator</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -343,9 +343,36 @@
 					<li class=" tsd-kind-class">
 						<a href="ohlcgenerator.html" class="tsd-kind-icon">OHLCGenerator</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="parametricfunctiongenerator.html" class="tsd-kind-icon">Parametric<wbr>Function<wbr>Generator</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="parametricfunctiongenerator.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="parametricfunctiongenerator.html#generate" class="tsd-kind-icon">generate</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="parametricfunctiongenerator.html#setend" class="tsd-kind-icon">set<wbr>End</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="parametricfunctiongenerator.html#setstart" class="tsd-kind-icon">set<wbr>Start</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="parametricfunctiongenerator.html#setstep" class="tsd-kind-icon">set<wbr>Step</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="parametricfunctiongenerator.html#setxfunction" class="tsd-kind-icon">setXFunction</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="parametricfunctiongenerator.html#setyfunction" class="tsd-kind-icon">setYFunction</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="progressivefunctiongenerator.html" class="tsd-kind-icon">Progressive<wbr>Function<wbr>Generator</a>
 					</li>
@@ -358,27 +385,9 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="sampleddatagenerator.html" class="tsd-kind-icon">Sampled<wbr>Data<wbr>Generator</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class tsd-has-type-parameter">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="stream.html" class="tsd-kind-icon">Stream</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="stream.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="stream.html#foreach" class="tsd-kind-icon">for<wbr>Each</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="stream.html#map" class="tsd-kind-icon">map</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="stream.html#push" class="tsd-kind-icon">push</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="tracegenerator.html" class="tsd-kind-icon">Trace<wbr>Generator</a>
 					</li>
