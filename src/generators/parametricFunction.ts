@@ -44,6 +44,8 @@ export function createParametricFunctionGenerator() {
 /**
  * A Parametric function data generator.
  * Generates point data by sampling X and Y functions with for each step `t`.
+ *
+ * To create a new instance of Parametric function data generator use [[createParametricFunctionGenerator]] factory.
  */
 class ParametricFunctionGenerator extends DataGenerator<Point, ParametricFunctionOptions> {
     private t = this.options.start

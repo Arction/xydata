@@ -24,6 +24,8 @@ export function createProgressiveTraceGenerator() {
 /**
  * A progressive trace data generator.
  * Generates point data that has progressive X axis. The data is always derived from the previous point.
+ *
+ * To create a new instance of progressive trace data generator use [[createProgressiveTraceGenerator]] factory.
  */
 class ProgressiveTraceGenerator extends DataGenerator<Point, ProgressiveTraceGeneratorOptions> {
     constructor( args: ProgressiveTraceGeneratorOptions ) {

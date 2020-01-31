@@ -24,6 +24,8 @@ export function createWhiteNoiseGenerator() {
 /**
  * A white noise data generator.
  * Generates white noise.
+ *
+ * To create a new instance of white noise data generator use [[createWhiteNoiseGenerator]] factory.
  */
 class WhiteNoiseGenerator extends DataGenerator<Point, WhiteNoiseGeneratorOptions> {
     constructor( args: WhiteNoiseGeneratorOptions ) {

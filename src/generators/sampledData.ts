@@ -50,6 +50,8 @@ export function createSampledDataGenerator<T>() {
  * A sampled data generator.
  * Samples given data with specific frequency.
  * @param T Data type for the data that the generator samples.
+ *
+ * To create a new instance of sampled data generator use [[createSampledDataGenerator]] factory.
  */
 class SampledDataGenerator<T> extends DataGenerator<SampledPoint<T>, SampledDataGeneratorOptions<T>> {
     private interval = 1 / ( this.options.samplingFrequency || 10 )

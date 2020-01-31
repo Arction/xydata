@@ -49,6 +49,8 @@ export function createDeltaFunctionGenerator() {
 /**
  * A Delta function generator.
  * Generates random spikes in otherwise flat data. Generated data is between 0 and 1.
+ *
+ * To create a new instance of Delta function generator use [[createDeltaFunctionGenerator]] factory.
  */
 class DeltaFunctionGenerator extends DataGenerator<Point, DeltaFunctionOptions> {
     constructor( args: DeltaFunctionOptions ) {
