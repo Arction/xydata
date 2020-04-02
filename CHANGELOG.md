@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased] - yyyy-mm-dd
 ### Added
 
-- Node JS Support
-
 ### Changed
 
 ### Deprecated
@@ -17,7 +15,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [1.1.0] - 2019-01-31
+## [1.2.0] - 2020-04-02
+### Added
+
+- Node JS Support
+
+### Changed
+
+- Upgraded dependencies to latest released versions
+- Updated documentation using latest TypeDoc generator
+
+## [1.1.0] - 2020-01-31
 ### Added
 
 - Parametric Function Generator
