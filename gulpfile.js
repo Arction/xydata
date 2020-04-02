@@ -10,7 +10,6 @@ const rollupSourceMaps = require('rollup-plugin-sourcemaps')
 const terser = require('gulp-terser')
 const del = require('del')
 const pkg = require('./package.json')
-const typedoc = require('gulp-typedoc')
 const allFiles = ['src/**/*.ts', 'test/**/*.ts']
 // Task functions
 /**
@@ -74,25 +73,6 @@ function minify() {
         .pipe(dest('dist'))
 }
 /**
- * TypeDoc function
- */
-function docs() {
-    return src(['src/**/*.ts'])
-        .pipe(typedoc({
-            module: 'commonjs',
-            target: 'ES5',
-            excludeProtected: true,
-            excludePrivate: true,
-            excludeExternals: true,
-            out: 'docs',
-            mode: 'file',
-            tsConfig: 'tsconfig.json',
-            name: 'XYData Generator API Documentation',
-            hideGenerator: true,
-            exclude: '**/node_modules/**'
-        }))
-}
-/**
  * Linting function
  */
 function lint() {
@@ -138,8 +118,6 @@ const buildWatcher = () => watch(allFiles, build)
 const buildWatch = series(build, buildWatcher)
 
 // Export functions for gulp CLI
-// Build documentation
-exports.docs = docs
 // Start testing
 exports.test = test
 // Start test watching

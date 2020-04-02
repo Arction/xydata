@@ -1,5 +1,9 @@
 import { DataHost } from './dataHost'
 
+/**
+ * Feature detected performance.now function
+ * @hidden
+ */
 let perfNow: () => number
 
 // feature detect window.performance.now with checks at all levels.
