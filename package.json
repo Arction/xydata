@@ -38,7 +38,7 @@
     "lint": "gulp lintWatch",
     "prepublishOnly": "gulp build",
     "test": "gulp testWatch",
-    "version": "gulp docs"
+    "version": "npm run docs && git add docs"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
