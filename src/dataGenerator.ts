@@ -1,5 +1,24 @@
 import { DataHost } from './dataHost'
 
+let perfNow: () => number
+
+// feature detect window.performance.now with checks at all levels.
+if ( typeof window !== 'undefined' && window.performance && window.performance.now ) {
+    perfNow = window.performance.now
+} else {
+    // window.performance.now doesn't exist, try to load Node JS version
+    try {
+        if ( typeof require !== 'undefined' ) {
+            perfNow = require( 'perf_hooks' ).performance.now
+        } else {
+            // require failed, throw an error
+            throw new Error()
+        }
+    } catch ( e ) {
+        throw new Error( 'Failed to detect "performance.now" API' )
+    }
+}
+
 /**
  * Abstract base class for all data generators.
  * Defines a generate function that is used to create new instances of data host.
@@ -40,10 +59,10 @@ export abstract class DataGenerator<T, K> {
      * @param dataHost The data host to push the data to.
      */
     private generateChunks( baseIndex: number, total: number, dataHost: DataHost<T> ) {
-        const startTime = window.performance.now()
+        const startTime = perfNow()
         const points = []
         // Generate data until elapsed time is more than 15 ms or we have generated enough data.
-        for ( let i = 0; window.performance.now() - startTime < 15 && baseIndex < total; i++ ) {
+        for ( let i = 0; perfNow() - startTime < 15 && baseIndex < total; i++ ) {
             const point = this.generateDataPoint( baseIndex )
             baseIndex++;
             points.push( point )
