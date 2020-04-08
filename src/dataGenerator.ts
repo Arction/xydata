@@ -8,7 +8,7 @@ let perfNow: () => number
 
 // feature detect window.performance.now with checks at all levels.
 if ( typeof window !== 'undefined' && window.performance && window.performance.now ) {
-    perfNow = window.performance.now
+    perfNow = window.performance.now.bind( window.performance )
 } else {
     // window.performance.now doesn't exist, try to load Node JS version
     try {
