@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Fixed "TypeError: 'now' called on an object that does not implement interface Performance." when using xydata in browser with Webpack
+
 ### Security
 
 ## [1.2.0] - 2020-04-02
