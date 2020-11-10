@@ -184,8 +184,8 @@ class SpectrumDataGenerator extends DataGenerator<number[], SpectrumDataOptions>
         const dA2 = dPeakY2 / ( dHalf * dHalf ) * dNarrowFactor2
         let dSum12
         for ( let i = 0; i < m_iRowLength; i++ ) {
-            dX1 = i - m_dPeak1X
-            dX2 = i - m_dPeak2X
+            dX1 = 0.8 * i - m_dPeak1X
+            dX2 = 0.8 * i - m_dPeak2X
             dNewValue1 = dPeakY1 - dX1 * dX1 * dA1
             if ( dNewValue1 < m_dMin )
                 dNewValue1 = m_dMin
