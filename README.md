@@ -112,6 +112,7 @@ after the stream has been generated.
 | Sample Data | Sample given array with specified frequency and user defined step. |
 | Trace | Generate random trace data that can go to any direction on the XY coordinates. |
 | White Noise | Generate white noise. |
+| Spectrum Data | Generate spectrum data. |
 
 ## Development instructions
 
