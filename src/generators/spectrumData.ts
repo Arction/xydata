@@ -134,9 +134,9 @@ class SpectrumDataGenerator extends DataGenerator<number[], SpectrumDataOptions>
 
     /**
      * Generate a new row of Spectrum data.
-     * @param i Index of point.
+     * @param iPoint Index of point.
      */
-    protected generateDataPoint( i: number ) {
+    protected generateDataPoint( iPoint: number ) {
         const m_dInitialValue = 10.0
         // NOTE: Data is scaled to [0, 1] at the very end.
         const m_dMax = 100
@@ -171,7 +171,10 @@ class SpectrumDataGenerator extends DataGenerator<number[], SpectrumDataOptions>
             m_dPeak2X = m_iRowLength
 
 
-        let dNewValue1, dNewValue2, dX1, dX2
+        let dNewValue1
+        let dNewValue2
+        let dX1
+        let dX2
         const dPeakY1 = m_dMax / 3.0 * 2.0
         const dPeakY2 = m_dMax / 2.0
         const dNarrowFactor1 = this.options.narrowFactor1
