@@ -75,6 +75,7 @@
 								<li class="tsd-kind-class"><a href="classes/progressiverandomgenerator.html" class="tsd-kind-icon">Progressive<wbr>Random<wbr>Generator</a></li>
 								<li class="tsd-kind-class"><a href="classes/progressivetracegenerator.html" class="tsd-kind-icon">Progressive<wbr>Trace<wbr>Generator</a></li>
 								<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/sampleddatagenerator.html" class="tsd-kind-icon">Sampled<wbr>Data<wbr>Generator</a></li>
+								<li class="tsd-kind-class"><a href="classes/spectrumdatagenerator.html" class="tsd-kind-icon">Spectrum<wbr>Data<wbr>Generator</a></li>
 								<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/stream.html" class="tsd-kind-icon">Stream</a></li>
 								<li class="tsd-kind-class"><a href="classes/tracegenerator.html" class="tsd-kind-icon">Trace<wbr>Generator</a></li>
 								<li class="tsd-kind-class"><a href="classes/whitenoisegenerator.html" class="tsd-kind-icon">White<wbr>Noise<wbr>Generator</a></li>
@@ -92,6 +93,7 @@
 								<li class="tsd-kind-interface"><a href="interfaces/progressivetracegeneratoroptions.html" class="tsd-kind-icon">Progressive<wbr>Trace<wbr>Generator<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/sampleddatageneratoroptions.html" class="tsd-kind-icon">Sampled<wbr>Data<wbr>Generator<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/sampledpoint.html" class="tsd-kind-icon">Sampled<wbr>Point</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/spectrumdataoptions.html" class="tsd-kind-icon">Spectrum<wbr>Data<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/streamoptions.html" class="tsd-kind-icon">Stream<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/tracegeneratoroptions.html" class="tsd-kind-icon">Trace<wbr>Generator<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/whitenoisegeneratoroptions.html" class="tsd-kind-icon">White<wbr>Noise<wbr>Generator<wbr>Options</a></li>
@@ -115,8 +117,15 @@
 								<li class="tsd-kind-function"><a href="globals.html#createprogressiverandomgenerator" class="tsd-kind-icon">create<wbr>Progressive<wbr>Random<wbr>Generator</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#createprogressivetracegenerator" class="tsd-kind-icon">create<wbr>Progressive<wbr>Trace<wbr>Generator</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#createsampleddatagenerator" class="tsd-kind-icon">create<wbr>Sampled<wbr>Data<wbr>Generator</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#createspectrumdatagenerator" class="tsd-kind-icon">create<wbr>Spectrum<wbr>Data<wbr>Generator</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#createtracegenerator" class="tsd-kind-icon">create<wbr>Trace<wbr>Generator</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#createwhitenoisegenerator" class="tsd-kind-icon">create<wbr>White<wbr>Noise<wbr>Generator</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal"><a href="globals.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
 							</ul>
 						</section>
 					</div>
@@ -370,6 +379,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="createspectrumdatagenerator" class="tsd-anchor"></a>
+					<h3>create<wbr>Spectrum<wbr>Data<wbr>Generator</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Spectrum<wbr>Data<wbr>Generator<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in generators/spectrumData.ts:52</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a new Progressive Random Generator with default values.
+									The generator creates rows of numbers.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="classes/spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="createtracegenerator" class="tsd-anchor"></a>
 					<h3>create<wbr>Trace<wbr>Generator</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -416,6 +448,79 @@
 					</ul>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/spectrumData.ts:39</li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.frequencystability" class="tsd-anchor"></a>
+						<h3>frequency<wbr>Stability</h3>
+						<div class="tsd-signature tsd-kind-icon">frequency<wbr>Stability<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in generators/spectrumData.ts:43</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.narrowfactor1" class="tsd-anchor"></a>
+						<h3>narrow<wbr>Factor1</h3>
+						<div class="tsd-signature tsd-kind-icon">narrow<wbr>Factor1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 8</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in generators/spectrumData.ts:44</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.narrowfactor2" class="tsd-anchor"></a>
+						<h3>narrow<wbr>Factor2</h3>
+						<div class="tsd-signature tsd-kind-icon">narrow<wbr>Factor2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 24</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in generators/spectrumData.ts:45</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.numberofsamples" class="tsd-anchor"></a>
+						<h3>number<wbr>OfSamples</h3>
+						<div class="tsd-signature tsd-kind-icon">number<wbr>OfSamples<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1000</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in generators/spectrumData.ts:40</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.samplesize" class="tsd-anchor"></a>
+						<h3>sample<wbr>Size</h3>
+						<div class="tsd-signature tsd-kind-icon">sample<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in generators/spectrumData.ts:41</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.variation" class="tsd-anchor"></a>
+						<h3>variation</h3>
+						<div class="tsd-signature tsd-kind-icon">variation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in generators/spectrumData.ts:42</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -454,6 +559,9 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/sampleddatagenerator.html" class="tsd-kind-icon">Sampled<wbr>Data<wbr>Generator</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/spectrumdatagenerator.html" class="tsd-kind-icon">Spectrum<wbr>Data<wbr>Generator</a>
+					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/stream.html" class="tsd-kind-icon">Stream</a>
 					</li>
@@ -489,6 +597,9 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/sampledpoint.html" class="tsd-kind-icon">Sampled<wbr>Point</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/spectrumdataoptions.html" class="tsd-kind-icon">Spectrum<wbr>Data<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/streamoptions.html" class="tsd-kind-icon">Stream<wbr>Options</a>
@@ -530,10 +641,16 @@
 						<a href="globals.html#createsampleddatagenerator" class="tsd-kind-icon">create<wbr>Sampled<wbr>Data<wbr>Generator</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#createspectrumdatagenerator" class="tsd-kind-icon">create<wbr>Spectrum<wbr>Data<wbr>Generator</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#createtracegenerator" class="tsd-kind-icon">create<wbr>Trace<wbr>Generator</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#createwhitenoisegenerator" class="tsd-kind-icon">create<wbr>White<wbr>Noise<wbr>Generator</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
