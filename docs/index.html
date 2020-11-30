@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>XYData Generator API Documentation</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for XYData Generator API Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -76,7 +76,7 @@
 				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
 					<h2>Getting started</h2>
 				</a>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createProgressiveRandomGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">'@arction/xydata'</span>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createProgressiveRandomGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@arction/xydata&#x27;</span>
 
 <span class="hljs-comment">// create new instance of progressive random generator</span>
 createProgressiveRandomGenerator()
@@ -105,7 +105,7 @@ createProgressiveRandomGenerator()
 					<h3>Creating multiple data sets</h3>
 				</a>
 				<p>You can call <code>.generate()</code> function multiple times to get new sets of data.</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createTraceGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">'@arction/xydata'</span>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createTraceGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@arction/xydata&#x27;</span>
 
 <span class="hljs-keyword">const</span> generator = createTraceGenerator()
 
@@ -116,10 +116,10 @@ createProgressiveRandomGenerator()
 					<h3>Changing generator settings</h3>
 				</a>
 				<p>When a data generator is created it has some default settings based on which generator it is. To change any of these settings call <code>.set....</code> function that will create a new data generator with that setting changed. You can&#39;t change multiple settings with a single call or change settings of a generator that has been created previously. A change in settings will always result in a new generator.</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createTraceGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">'@arction/xydata'</span>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createTraceGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@arction/xydata&#x27;</span>
 
 <span class="hljs-keyword">const</span> generator = createTraceGenerator()
-    .setNumberOfPoints( <span class="hljs-number">10</span> )
+   .setNumberOfPoints( <span class="hljs-number">10</span> )
 
 <span class="hljs-keyword">const</span> derivedGenerator = generator.setNumberOfPoints( <span class="hljs-number">20</span> )
 
@@ -131,14 +131,14 @@ createProgressiveRandomGenerator()
 					<h3>Data streams</h3>
 				</a>
 				<p>The data sets have possibility to output the data as a stream of data. These streams can be used to alter the data in multiple steps.</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createTraceGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">'@arction/xydata'</span>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createTraceGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@arction/xydata&#x27;</span>
 
 createTraceGenerator()
-    .setNumberOfPoints( <span class="hljs-number">10</span> )
-    .generate()
-    .toStream()
-    .map( <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> ( { x:value.x, y: value.y * <span class="hljs-number">2</span> } ) )
-    .forEach( <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(value) )</code></pre>
+   .setNumberOfPoints( <span class="hljs-number">10</span> )
+   .generate()
+   .toStream()
+   .map( <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> ( { <span class="hljs-attr">x</span>:value.x, <span class="hljs-attr">y</span>: value.y * <span class="hljs-number">2</span> } ) )
+   .forEach( <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(value) )</code></pre>
 				<p>This code would create a data generator and then stream that data through two functions, map and forEach.
 					The map function alters the data by multiplying the y value by 2 and then streams it to the forEach function.
 				The forEach function would log each invidual point to console.</p>
@@ -390,6 +390,5 @@ createTraceGenerator()
 </footer>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
