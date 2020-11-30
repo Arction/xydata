@@ -1,9 +1,6 @@
 {
-  "inputFiles": [
-    "src/**/*.ts"
-  ],
-  "module": "commonjs",
-  "target": "ES5",
+  "inputFiles": ["./src"],
+  "target": "es5",
   "excludeProtected": true,
   "excludePrivate": true,
   "excludeExternals": true,
