@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SampledDataGenerator | XYData Generator API Documentation</title>
+	<title>SpectrumDataGenerator | XYData Generator API Documentation</title>
 	<meta name="description" content="Documentation for XYData Generator API Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="sampleddatagenerator.html">SampledDataGenerator</a>
+					<a href="spectrumdatagenerator.html">SpectrumDataGenerator</a>
 				</li>
 			</ul>
-			<h1>Class SampledDataGenerator&lt;T&gt;</h1>
+			<h1>Class SpectrumDataGenerator</h1>
 		</div>
 	</div>
 </header>
@@ -65,33 +65,21 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A sampled data generator.
-						Samples given data with specific frequency.</p>
+						<p>Spectrum data generator.
+							Generates rows of random numbers that can be used to mimic spectrum data.
+						Generated data is between 0 and 1.</p>
 					</div>
+					<p>To create a new instance of Spectrum data generator use <a href="../globals.html#createspectrumdatagenerator">createSpectrumDataGenerator</a> factory.</p>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>Data type for the data that the generator samples.</p>
-								<p>To create a new instance of sampled data generator use <a href="../globals.html#createsampleddatagenerator">createSampledDataGenerator</a> factory.</p>
-							</div>
-						</div>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="datagenerator.html" class="tsd-signature-type">DataGenerator</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/sampledpoint.html" class="tsd-signature-type">SampledPoint</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/sampleddatageneratoroptions.html" class="tsd-signature-type">SampledDataGeneratorOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>
+						<a href="datagenerator.html" class="tsd-signature-type">DataGenerator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/spectrumdataoptions.html" class="tsd-signature-type">SpectrumDataOptions</a><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">SampledDataGenerator</span>
+								<span class="target">SpectrumDataGenerator</span>
 							</li>
 						</ul>
 					</li>
@@ -104,16 +92,19 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="sampleddatagenerator.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="spectrumdatagenerator.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="sampleddatagenerator.html#generate" class="tsd-kind-icon">generate</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="sampleddatagenerator.html#setinputdata" class="tsd-kind-icon">set<wbr>Input<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="sampleddatagenerator.html#setsamplingfrequency" class="tsd-kind-icon">set<wbr>Sampling<wbr>Frequency</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="sampleddatagenerator.html#setstep" class="tsd-kind-icon">set<wbr>Step</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="spectrumdatagenerator.html#generate" class="tsd-kind-icon">generate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spectrumdatagenerator.html#setfrequencystability" class="tsd-kind-icon">set<wbr>Frequency<wbr>Stability</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spectrumdatagenerator.html#setnarrowfactor1" class="tsd-kind-icon">set<wbr>Narrow<wbr>Factor1</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spectrumdatagenerator.html#setnarrowfactor2" class="tsd-kind-icon">set<wbr>Narrow<wbr>Factor2</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spectrumdatagenerator.html#setnumberofsamples" class="tsd-kind-icon">set<wbr>Number<wbr>OfSamples</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spectrumdatagenerator.html#setsamplesize" class="tsd-kind-icon">set<wbr>Sample<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="spectrumdatagenerator.html#setvariation" class="tsd-kind-icon">set<wbr>Variation</a></li>
 							</ul>
 						</section>
 					</div>
@@ -125,23 +116,23 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Sampled<wbr>Data<wbr>Generator<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><a href="../interfaces/sampleddatageneratoroptions.html" class="tsd-signature-type">SampledDataGeneratorOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="sampleddatagenerator.html" class="tsd-signature-type">SampledDataGenerator</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Spectrum<wbr>Data<wbr>Generator<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><a href="../interfaces/spectrumdataoptions.html" class="tsd-signature-type">SpectrumDataOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="datagenerator.html">DataGenerator</a>.<a href="datagenerator.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in generators/sampledData.ts:57</li>
+									<li>Defined in generators/spectrumData.ts:63</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>args: <a href="../interfaces/sampleddatageneratoroptions.html" class="tsd-signature-type">SampledDataGeneratorOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>args: <a href="../interfaces/spectrumdataoptions.html" class="tsd-signature-type">SpectrumDataOptions</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="sampleddatagenerator.html" class="tsd-signature-type">SampledDataGenerator</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -152,7 +143,7 @@
 					<a name="generate" class="tsd-anchor"></a>
 					<h3>generate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">generate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="datahost.html" class="tsd-signature-type">DataHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/sampledpoint.html" class="tsd-signature-type">SampledPoint</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">generate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="datahost.html" class="tsd-signature-type">DataHost</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -168,101 +159,195 @@
 									Data is added to the DataHost asynchronously.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="datahost.html" class="tsd-signature-type">DataHost</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/sampledpoint.html" class="tsd-signature-type">SampledPoint</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="datahost.html" class="tsd-signature-type">DataHost</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>A new DataHost.</p>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setinputdata" class="tsd-anchor"></a>
-					<h3>set<wbr>Input<wbr>Data</h3>
+					<a name="setfrequencystability" class="tsd-anchor"></a>
+					<h3>set<wbr>Frequency<wbr>Stability</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Input<wbr>Data<span class="tsd-signature-symbol">(</span>inputData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="sampleddatagenerator.html" class="tsd-signature-type">SampledDataGenerator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Frequency<wbr>Stability<span class="tsd-signature-symbol">(</span>frequencyStability<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generators/sampledData.ts:72</li>
+									<li>Defined in generators/spectrumData.ts:108</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a new Data generator with new the new array of data as sampling target.</p>
+									<p>Returns a new Data generator with the new frequencyStability.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>inputData: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>frequencyStability: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Array of data to sample.</p>
+										<p>Frequency drifting also depends on Variation,
+										which effects especially in low Frequency Stability amounts.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="sampleddatagenerator.html" class="tsd-signature-type">SampledDataGenerator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setsamplingfrequency" class="tsd-anchor"></a>
-					<h3>set<wbr>Sampling<wbr>Frequency</h3>
+					<a name="setnarrowfactor1" class="tsd-anchor"></a>
+					<h3>set<wbr>Narrow<wbr>Factor1</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Sampling<wbr>Frequency<span class="tsd-signature-symbol">(</span>samplingFrequency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="sampleddatagenerator.html" class="tsd-signature-type">SampledDataGenerator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Narrow<wbr>Factor1<span class="tsd-signature-symbol">(</span>narrowFactor1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generators/sampledData.ts:80</li>
+									<li>Defined in generators/spectrumData.ts:116</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a new Data generator with the new sampling frequency.</p>
+									<p>Returns a new Data generator with the new narrowFactor1.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>samplingFrequency: <span class="tsd-signature-type">number</span></h5>
+									<h5>narrowFactor1: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Set the frequency that the data is sampled from the input array.</p>
+										<p>Factor that alters the narrowness of first spectrum channel.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="sampleddatagenerator.html" class="tsd-signature-type">SampledDataGenerator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setstep" class="tsd-anchor"></a>
-					<h3>set<wbr>Step</h3>
+					<a name="setnarrowfactor2" class="tsd-anchor"></a>
+					<h3>set<wbr>Narrow<wbr>Factor2</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Step<span class="tsd-signature-symbol">(</span>step<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="sampleddatagenerator.html" class="tsd-signature-type">SampledDataGenerator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Narrow<wbr>Factor2<span class="tsd-signature-symbol">(</span>narrowFactor2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generators/sampledData.ts:88</li>
+									<li>Defined in generators/spectrumData.ts:124</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a new Data generator with the new step.</p>
+									<p>Returns a new Data generator with the new narrowFactor2.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>step: <span class="tsd-signature-type">number</span></h5>
+									<h5>narrowFactor2: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A constant step between samplings.</p>
+										<p>Factor that alters the narrowness of second spectrum channel.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="sampleddatagenerator.html" class="tsd-signature-type">SampledDataGenerator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setnumberofsamples" class="tsd-anchor"></a>
+					<h3>set<wbr>Number<wbr>OfSamples</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Number<wbr>OfSamples<span class="tsd-signature-symbol">(</span>numberOfSamples<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in generators/spectrumData.ts:83</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new Data generator with the new numberOfSamples.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>numberOfSamples: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>How many samples to generate</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setsamplesize" class="tsd-anchor"></a>
+					<h3>set<wbr>Sample<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Sample<wbr>Size<span class="tsd-signature-symbol">(</span>sampleSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in generators/spectrumData.ts:91</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new Data generator with the new sampleSize.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sampleSize: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>How many values are in a single spectrum sample.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setvariation" class="tsd-anchor"></a>
+					<h3>set<wbr>Variation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Variation<span class="tsd-signature-symbol">(</span>variation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in generators/spectrumData.ts:99</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new Data generator with the new variation.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>variation: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Variation between adjacent points in range 0...100.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="spectrumdatagenerator.html" class="tsd-signature-type">SpectrumDataGenerator</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -302,33 +387,42 @@
 					<li class=" tsd-kind-class">
 						<a href="progressivetracegenerator.html" class="tsd-kind-icon">Progressive<wbr>Trace<wbr>Generator</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="sampleddatagenerator.html" class="tsd-kind-icon">Sampled<wbr>Data<wbr>Generator</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-has-type-parameter">
-						<a href="sampleddatagenerator.html" class="tsd-kind-icon">Sampled<wbr>Data<wbr>Generator</a>
+					<li class="current tsd-kind-class">
+						<a href="spectrumdatagenerator.html" class="tsd-kind-icon">Spectrum<wbr>Data<wbr>Generator</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="sampleddatagenerator.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="spectrumdatagenerator.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="sampleddatagenerator.html#generate" class="tsd-kind-icon">generate</a>
+								<a href="spectrumdatagenerator.html#generate" class="tsd-kind-icon">generate</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="sampleddatagenerator.html#setinputdata" class="tsd-kind-icon">set<wbr>Input<wbr>Data</a>
+								<a href="spectrumdatagenerator.html#setfrequencystability" class="tsd-kind-icon">set<wbr>Frequency<wbr>Stability</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="sampleddatagenerator.html#setsamplingfrequency" class="tsd-kind-icon">set<wbr>Sampling<wbr>Frequency</a>
+								<a href="spectrumdatagenerator.html#setnarrowfactor1" class="tsd-kind-icon">set<wbr>Narrow<wbr>Factor1</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="sampleddatagenerator.html#setstep" class="tsd-kind-icon">set<wbr>Step</a>
+								<a href="spectrumdatagenerator.html#setnarrowfactor2" class="tsd-kind-icon">set<wbr>Narrow<wbr>Factor2</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="spectrumdatagenerator.html#setnumberofsamples" class="tsd-kind-icon">set<wbr>Number<wbr>OfSamples</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="spectrumdatagenerator.html#setsamplesize" class="tsd-kind-icon">set<wbr>Sample<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="spectrumdatagenerator.html#setvariation" class="tsd-kind-icon">set<wbr>Variation</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="spectrumdatagenerator.html" class="tsd-kind-icon">Spectrum<wbr>Data<wbr>Generator</a>
-					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="stream.html" class="tsd-kind-icon">Stream</a>
 					</li>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SampledPoint | XYData Generator API Documentation</title>
+	<title>SpectrumDataOptions | XYData Generator API Documentation</title>
 	<meta name="description" content="Documentation for XYData Generator API Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="sampledpoint.html">SampledPoint</a>
+					<a href="spectrumdataoptions.html">SpectrumDataOptions</a>
 				</li>
 			</ul>
-			<h1>Interface SampledPoint&lt;T&gt;</h1>
+			<h1>Interface SpectrumDataOptions</h1>
 		</div>
 	</div>
 </header>
@@ -65,28 +65,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Structure for the sampled point.</p>
+						<p>Options for the Spectrum data generator.</p>
 					</div>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>Data type for the data that the generator samples.</p>
-							</div>
-						</div>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SampledPoint</span>
+						<span class="target">SpectrumDataOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -97,8 +84,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sampledpoint.html#data" class="tsd-kind-icon">data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sampledpoint.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="spectrumdataoptions.html#frequencystability" class="tsd-kind-icon">frequency<wbr>Stability</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="spectrumdataoptions.html#narrowfactor1" class="tsd-kind-icon">narrow<wbr>Factor1</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="spectrumdataoptions.html#narrowfactor2" class="tsd-kind-icon">narrow<wbr>Factor2</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="spectrumdataoptions.html#numberofsamples" class="tsd-kind-icon">number<wbr>OfSamples</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="spectrumdataoptions.html#samplesize" class="tsd-kind-icon">sample<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="spectrumdataoptions.html#variation" class="tsd-kind-icon">variation</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,32 +98,92 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="data" class="tsd-anchor"></a>
-					<h3>data</h3>
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
+					<a name="frequencystability" class="tsd-anchor"></a>
+					<h3>frequency<wbr>Stability</h3>
+					<div class="tsd-signature tsd-kind-icon">frequency<wbr>Stability<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in generators/sampledData.ts:33</li>
+							<li>Defined in generators/spectrumData.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The value from the input array that has been sampled.</p>
+							<p>Frequency drifting also depends on Variation, which effects especially in low Frequency Stability amounts.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="timestamp" class="tsd-anchor"></a>
-					<h3>timestamp</h3>
-					<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="narrowfactor1" class="tsd-anchor"></a>
+					<h3>narrow<wbr>Factor1</h3>
+					<div class="tsd-signature tsd-kind-icon">narrow<wbr>Factor1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in generators/sampledData.ts:29</li>
+							<li>Defined in generators/spectrumData.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The timestamp for this data point.</p>
+							<p>Factor that alters the narrowness of first spectrum channel.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="narrowfactor2" class="tsd-anchor"></a>
+					<h3>narrow<wbr>Factor2</h3>
+					<div class="tsd-signature tsd-kind-icon">narrow<wbr>Factor2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/spectrumData.ts:36</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Factor that alters the narrowness of second spectrum channel.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="numberofsamples" class="tsd-anchor"></a>
+					<h3>number<wbr>OfSamples</h3>
+					<div class="tsd-signature tsd-kind-icon">number<wbr>OfSamples<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/spectrumData.ts:11</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>How many samples to generate.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="samplesize" class="tsd-anchor"></a>
+					<h3>sample<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">sample<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/spectrumData.ts:16</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>How many values are in a single spectrum sample.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="variation" class="tsd-anchor"></a>
+					<h3>variation</h3>
+					<div class="tsd-signature tsd-kind-icon">variation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/spectrumData.ts:21</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Variation between adjacent points in range 0...100.</p>
 						</div>
 					</div>
 				</section>
@@ -211,24 +262,36 @@
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="sampleddatageneratoroptions.html" class="tsd-kind-icon">Sampled<wbr>Data<wbr>Generator<wbr>Options</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="sampledpoint.html" class="tsd-kind-icon">Sampled<wbr>Point</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-has-type-parameter">
-						<a href="sampledpoint.html" class="tsd-kind-icon">Sampled<wbr>Point</a>
+					<li class="current tsd-kind-interface">
+						<a href="spectrumdataoptions.html" class="tsd-kind-icon">Spectrum<wbr>Data<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="sampledpoint.html#data" class="tsd-kind-icon">data</a>
+								<a href="spectrumdataoptions.html#frequencystability" class="tsd-kind-icon">frequency<wbr>Stability</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="sampledpoint.html#timestamp" class="tsd-kind-icon">timestamp</a>
+								<a href="spectrumdataoptions.html#narrowfactor1" class="tsd-kind-icon">narrow<wbr>Factor1</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="spectrumdataoptions.html#narrowfactor2" class="tsd-kind-icon">narrow<wbr>Factor2</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="spectrumdataoptions.html#numberofsamples" class="tsd-kind-icon">number<wbr>OfSamples</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="spectrumdataoptions.html#samplesize" class="tsd-kind-icon">sample<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="spectrumdataoptions.html#variation" class="tsd-kind-icon">variation</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="spectrumdataoptions.html" class="tsd-kind-icon">Spectrum<wbr>Data<wbr>Options</a>
-					</li>
 					<li class=" tsd-kind-interface">
 						<a href="streamoptions.html" class="tsd-kind-icon">Stream<wbr>Options</a>
 					</li>
