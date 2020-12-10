@@ -1,7 +1,9 @@
 // Generator for heat map data (2 dimensional plane, XY, where each XY coordinate is associated with an intensity value).
 // Can be configured with arbitrary number of "water drops", which are like spots of more exposed area in the generated heat map data. 
 
-
+/**
+ * Water Drop data generator generation options.
+ */
 export interface WaterDropDataOptions {
     /**
      * Size of output array.
@@ -60,6 +62,13 @@ export function createWaterDropDataGenerator() {
     return new WaterDropDataGenerator( defaultOptions )
 }
 
+/**
+ * Water drop data generator.
+ * Generates grid of data containing "water drops", which are like spots of more exposed area in the generated heat map data. 
+ * Generated data range depends on the [[WaterDropDataOptions]].
+ *
+ * To create a new instance of Water drop data generator use [[createWaterDropDataGenerator]] factory.
+ */
 class WaterDropDataGenerator {
 
     readonly options: WaterDropDataOptions
@@ -126,6 +135,9 @@ class WaterDropDataGenerator {
 
     /**
      * Generate WaterDropData asynchronously.
+     * 
+     * > NOTE: WaterDropData doesn't support the use of a DataHost and as such doesn't provide method to stream the data.
+     * > Instead the data is all provided at the same time as a Promise.
      */
     generate(): Promise<WaterDropData> {
         return new Promise( async ( resolve ) => {
