@@ -113,6 +113,7 @@ after the stream has been generated.
 | Trace | Generate random trace data that can go to any direction on the XY coordinates. |
 | White Noise | Generate white noise. |
 | Spectrum Data | Generate spectrum data. |
+| Water Drop Data | Generate water drop data. |
 
 ## Development instructions
 

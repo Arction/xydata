@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ParametricFunctionOptions | XYData Generator API Documentation</title>
+	<title>WaterDropDataOptions | XYData Generator API Documentation</title>
 	<meta name="description" content="Documentation for XYData Generator API Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="parametricfunctionoptions.html">ParametricFunctionOptions</a>
+					<a href="waterdropdataoptions.html">WaterDropDataOptions</a>
 				</li>
 			</ul>
-			<h1>Interface ParametricFunctionOptions</h1>
+			<h1>Interface WaterDropDataOptions</h1>
 		</div>
 	</div>
 </header>
@@ -65,7 +65,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Options for Parametric Function generator.</p>
+						<p>Water Drop data generator generation options.</p>
 					</div>
 				</div>
 			</section>
@@ -73,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ParametricFunctionOptions</span>
+						<span class="target">WaterDropDataOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -84,11 +84,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#end" class="tsd-kind-icon">end</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#start" class="tsd-kind-icon">start</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#step" class="tsd-kind-icon">step</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#xfunction" class="tsd-kind-icon">x<wbr>Function</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parametricfunctionoptions.html#yfunction" class="tsd-kind-icon">y<wbr>Function</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="waterdropdataoptions.html#amplitudes" class="tsd-kind-icon">amplitudes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="waterdropdataoptions.html#columnpositionsnormalized" class="tsd-kind-icon">column<wbr>Positions<wbr>Normalized</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="waterdropdataoptions.html#columns" class="tsd-kind-icon">columns</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="waterdropdataoptions.html#offsetlevel" class="tsd-kind-icon">offset<wbr>Level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="waterdropdataoptions.html#rowpositionsnormalized" class="tsd-kind-icon">row<wbr>Positions<wbr>Normalized</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="waterdropdataoptions.html#rows" class="tsd-kind-icon">rows</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="waterdropdataoptions.html#volatility" class="tsd-kind-icon">volatility</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,77 +99,107 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="end" class="tsd-anchor"></a>
-					<h3>end</h3>
-					<div class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="amplitudes" class="tsd-anchor"></a>
+					<h3>amplitudes</h3>
+					<div class="tsd-signature tsd-kind-icon">amplitudes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in generators/parametricFunction.ts:25</li>
+							<li>Defined in generators/waterDrop.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>End t-value.</p>
+							<p>Amplitudes of water drops.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="start" class="tsd-anchor"></a>
-					<h3>start</h3>
-					<div class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="columnpositionsnormalized" class="tsd-anchor"></a>
+					<h3>column<wbr>Positions<wbr>Normalized</h3>
+					<div class="tsd-signature tsd-kind-icon">column<wbr>Positions<wbr>Normalized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in generators/parametricFunction.ts:21</li>
+							<li>Defined in generators/waterDrop.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Start t-value.</p>
+							<p>Column positions of water drops. Normalized, range = [0, 1]</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="step" class="tsd-anchor"></a>
-					<h3>step</h3>
-					<div class="tsd-signature tsd-kind-icon">step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="columns" class="tsd-anchor"></a>
+					<h3>columns</h3>
+					<div class="tsd-signature tsd-kind-icon">columns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in generators/parametricFunction.ts:29</li>
+							<li>Defined in generators/waterDrop.ts:15</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Step of <code>t</code> between each sample</p>
+							<p>Size of output arrays nested arrays.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="xfunction" class="tsd-anchor"></a>
-					<h3>x<wbr>Function</h3>
-					<div class="tsd-signature tsd-kind-icon">x<wbr>Function<span class="tsd-signature-symbol">:</span> <a href="../globals.html#parametricfunction" class="tsd-signature-type">ParametricFunction</a></div>
+					<a name="offsetlevel" class="tsd-anchor"></a>
+					<h3>offset<wbr>Level</h3>
+					<div class="tsd-signature tsd-kind-icon">offset<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in generators/parametricFunction.ts:13</li>
+							<li>Defined in generators/waterDrop.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Function for X-value</p>
+							<p>Offset level (mid-Y)</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="yfunction" class="tsd-anchor"></a>
-					<h3>y<wbr>Function</h3>
-					<div class="tsd-signature tsd-kind-icon">y<wbr>Function<span class="tsd-signature-symbol">:</span> <a href="../globals.html#parametricfunction" class="tsd-signature-type">ParametricFunction</a></div>
+					<a name="rowpositionsnormalized" class="tsd-anchor"></a>
+					<h3>row<wbr>Positions<wbr>Normalized</h3>
+					<div class="tsd-signature tsd-kind-icon">row<wbr>Positions<wbr>Normalized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in generators/parametricFunction.ts:17</li>
+							<li>Defined in generators/waterDrop.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Function for Y-value</p>
+							<p>Row positions of water drops. Normalized, range = [0, 1]</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="rows" class="tsd-anchor"></a>
+					<h3>rows</h3>
+					<div class="tsd-signature tsd-kind-icon">rows<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/waterDrop.ts:11</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Size of output array.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="volatility" class="tsd-anchor"></a>
+					<h3>volatility</h3>
+					<div class="tsd-signature tsd-kind-icon">volatility<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in generators/waterDrop.ts:35</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Volatility, set larger number to generate more waves for each drop</p>
 						</div>
 					</div>
 				</section>
@@ -186,22 +218,28 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="parametricfunctionoptions.html" class="tsd-kind-icon">Parametric<wbr>Function<wbr>Options</a>
+						<a href="waterdropdataoptions.html" class="tsd-kind-icon">Water<wbr>Drop<wbr>Data<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="parametricfunctionoptions.html#end" class="tsd-kind-icon">end</a>
+								<a href="waterdropdataoptions.html#amplitudes" class="tsd-kind-icon">amplitudes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="parametricfunctionoptions.html#start" class="tsd-kind-icon">start</a>
+								<a href="waterdropdataoptions.html#columnpositionsnormalized" class="tsd-kind-icon">column<wbr>Positions<wbr>Normalized</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="parametricfunctionoptions.html#step" class="tsd-kind-icon">step</a>
+								<a href="waterdropdataoptions.html#columns" class="tsd-kind-icon">columns</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="parametricfunctionoptions.html#xfunction" class="tsd-kind-icon">x<wbr>Function</a>
+								<a href="waterdropdataoptions.html#offsetlevel" class="tsd-kind-icon">offset<wbr>Level</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="parametricfunctionoptions.html#yfunction" class="tsd-kind-icon">y<wbr>Function</a>
+								<a href="waterdropdataoptions.html#rowpositionsnormalized" class="tsd-kind-icon">row<wbr>Positions<wbr>Normalized</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="waterdropdataoptions.html#rows" class="tsd-kind-icon">rows</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="waterdropdataoptions.html#volatility" class="tsd-kind-icon">volatility</a>
 							</li>
 						</ul>
 					</li>

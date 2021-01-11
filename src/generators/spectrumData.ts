@@ -46,8 +46,7 @@ const defaultOptions: SpectrumDataOptions = {
 }
 
 /**
- * Create a new Progressive Random Generator with default values.
- * The generator creates rows of numbers.
+ * Create a new Spectrum Data Generator with default values.
  */
 export function createSpectrumDataGenerator() {
     return new SpectrumDataGenerator( defaultOptions )
