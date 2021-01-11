@@ -203,14 +203,19 @@ class WaterDropDataGenerator {
             const stepX = ( dTotalX / sizeX )
             const stepZ = ( dTotalZ / sizeZ )
 
+            let lastTimeout = Date.now()
             let iDataPoint = 0
             for ( let row = 0, z = 0; row < sizeZ; row++, z += stepZ ) {
                 for ( let col = 0, x = 0; col < sizeX; col++, x += stepX ) {
                     result[col][row] = CalculateWavesAtPoint( x, z ) + offsetLevel
                     iDataPoint++
-                    if ( iDataPoint > 0 && iDataPoint % 50 * 1000 === 0 ) {
-                        // Timeout.
-                        await new Promise( clbk => setTimeout( clbk ) )
+                    if ( iDataPoint > 0 && iDataPoint % 1000 === 0 ) {
+                        // Check if timeout should be triggered.
+                        if ( Date.now() - lastTimeout >= 15 ) {
+                            // Timeout.
+                            await new Promise( clbk => setTimeout( clbk, 0 ) )
+                            lastTimeout = Date.now()
+                        }
                     }
                 }
             }
